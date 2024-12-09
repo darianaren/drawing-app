@@ -1,5 +1,5 @@
 <template>
-  <h1>Drawing App</h1>
+  <h1>Drawing App 🖌️</h1>
   <div class="drawing-container">
     <nav class="toolbar">
       <input
@@ -85,8 +85,8 @@ export default {
 .drawing-container {
   padding: 1rem;
 
-  border-radius: 0.5rem;
-  background-color: #353264;
+  border-radius: 1rem;
+  background-color: #2e383b;
 }
 
 .toolbar {
@@ -101,8 +101,8 @@ export default {
 
 .drawing-canvas {
   cursor: crosshair;
-  border-radius: 0.5rem;
-  background-color: #f3f0ec;
+  border-radius: 0.25rem;
+  background-color: #f7f4f0;
   background-image: radial-gradient(circle, #c1c6ca 1px, transparent 0);
   background-size: 40px 40px;
 }
