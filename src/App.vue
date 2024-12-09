@@ -1,6 +1,6 @@
 <template>
   <h1>Drawing App 🖌️</h1>
-  <div class="drawing-container">
+  <section class="drawing-container">
     <nav class="toolbar">
       <input
         min="1"
@@ -13,16 +13,18 @@
       <button @click="clearCanvas" class="clear-btn">Clear</button>
       <button @click="saveDrawing" class="save-btn">Save</button>
     </nav>
-    <canvas
-      ref="drawingCanvas"
-      class="drawing-canvas"
-      @mousemove="draw"
-      @mouseup="stopDrawing"
-      @mousedown="startDrawing"
-      @mouseleave="stopDrawing"
-    >
-    </canvas>
-  </div>
+    <div class="canvas-container">
+      <canvas
+        ref="drawingCanvas"
+        class="drawing-canvas"
+        @mousemove="draw"
+        @mouseup="stopDrawing"
+        @mousedown="startDrawing"
+        @mouseleave="stopDrawing"
+      >
+      </canvas>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -37,8 +39,8 @@ export default {
   },
   mounted() {
     const canvas = this.$refs.drawingCanvas;
-    canvas.width = window.innerWidth * 0.8;
-    canvas.height = window.innerHeight * 0.6;
+    canvas.width = 1090;
+    canvas.height = window.innerHeight * 0.55;
 
     this.context = canvas.getContext("2d");
     this.context.strokeStyle = this.brushColor;
@@ -84,7 +86,10 @@ export default {
 <style>
 .drawing-container {
   padding: 1rem;
+  max-width: 70rem;
+  width: calc(100vw - 2rem);
 
+  margin: 0 auto;
   border-radius: 1rem;
   background-color: #2e383b;
 }
@@ -92,11 +97,19 @@ export default {
 .toolbar {
   gap: 1rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
 
   width: 100%;
   margin-bottom: 1rem;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 55vh;
+
+  overflow: hidden;
 }
 
 .drawing-canvas {

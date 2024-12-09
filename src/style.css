@@ -25,10 +25,10 @@
 }
 
 h1 {
-  font-size: 3.2em;
   line-height: 1.1;
   color: #2e383b;
   text-align: center;
+  font-size: min(10vw, 3.2em);
 }
 
 button {
