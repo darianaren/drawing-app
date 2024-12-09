@@ -39,6 +39,11 @@ Asegúrate de tener instalados:
    npm run dev
    ```
 
+4. Abre la aplicación en tu navegador: La aplicación debería estar disponible en tu navegador en la siguiente URL.
+
+   [http://localhost:5173](http://localhost:5173/)
+
+5. Asegúrate de que la APP funcione correctamente y diviertete creando hermosas obras de arte.
 ---
 
 ## ✨ Características  
