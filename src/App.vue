@@ -8,8 +8,14 @@
         type="range"
         v-model="brushSize"
         @input="changeSize"
+        aria-label="Change brush size"
       />
-      <input type="color" v-model="brushColor" @input="changeColor" />
+      <input
+        type="color"
+        v-model="brushColor"
+        @input="changeColor"
+        aria-label="Change brush color"
+      />
       <button @click="clearCanvas" class="clear-btn">Clear</button>
       <button @click="saveDrawing" class="save-btn">Save</button>
     </nav>
